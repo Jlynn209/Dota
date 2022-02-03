@@ -59,6 +59,7 @@ const DisplayHeroStats = () => {
                     }
                 }
             };
+            
             setData(data)
             setConfig(config)
           })
