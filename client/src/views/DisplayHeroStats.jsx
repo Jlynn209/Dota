@@ -102,51 +102,48 @@ const DisplayHeroStats = () => {
                                 <h6 style={{color:'white'}}>PRIMARY ATTRIBUTE: INTELLIGENCE</h6>
                             </div>
                         }
-                        
+                        <article>
+                            <table className='tableColor1 grey-color' style={{width:"400px"}}>
+                                <tbody>
+                                    <tr className='d-flex justify-content-around grey-color'>
+                                        <td><img style={{height:'50px'}} src={dota_agi} alt=''/></td>
+                                        <td><img style={{height:'50px'}} src={dota_str} alt=''/></td>
+                                        <td><img style={{height:'50px'}} src={dota_int} alt=''/></td>
+                                    </tr>
+                                    <tr className='d-flex justify-content-around grey-color rowBG1'>
+                                        <td style={{color:'white'}} >{heroes['base_agi']} + {heroes['agi_gain']} </td>
+                                        <td style={{color:'white'}} >{heroes['base_str']} + {heroes['str_gain']}</td>
+                                        <td style={{color:'white'}}>{heroes['base_int']} + {heroes['int_gain']}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table style={{width:"400px"}} className='tableColor1'>
+                                <tbody>
+                                    <tr className='rowBG2'>
+                                        <td style={{color:'white'}}>Movement Speed</td>
+                                        <td style={{color:'white'}}>&nbsp;{heroes['move_speed']}</td>
+                                    </tr>
+                                    <tr className='rowBG1'>
+                                        <td style={{color:'white'}}>Base Armor</td>
+                                        <td style={{color:'white'}}>&nbsp;{(heroes['base_armor'])}</td>
+                                    </tr>
+                                    <tr className='rowBG2'>
+                                        <td style={{color:'white'}}>Base Attack rate</td>
+                                        <td style={{color:'white'}}>&nbsp;{heroes['attack_rate']}</td>
+                                    </tr>
+                                    <tr className='rowBG1'>
+                                        <td style={{color:'white'}}>Base Damage</td>
+                                        <td style={{color:'white'}}>&nbsp;{(heroes['base_attack_min'])} - {(heroes['base_attack_max'])}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
                         <div>
-                            <article>
-                                <table className='tableColor1 grey-color' style={{width:"400px"}}>
-                                    <tbody>
-                                        <tr className='d-flex justify-content-around grey-color'>
-                                            <td><img style={{height:'50px'}} src={dota_agi} alt=''/></td>
-                                            <td><img style={{height:'50px'}} src={dota_str} alt=''/></td>
-                                            <td><img style={{height:'50px'}} src={dota_int} alt=''/></td>
-                                        </tr>
-                                        <tr className='d-flex justify-content-around grey-color rowBG1'>
-                                            <td style={{color:'white'}} >{heroes['base_agi']} + {heroes['agi_gain']} </td>
-                                            <td style={{color:'white'}} >{heroes['base_str']} + {heroes['str_gain']}</td>
-                                            <td style={{color:'white'}}>{heroes['base_int']} + {heroes['int_gain']}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table style={{width:"400px"}} className='tableColor1'>
-                                    <tbody>
-                                        <tr className='rowBG2'>
-                                            <td style={{color:'white'}}>Movement Speed</td>
-                                            <td style={{color:'white'}}>&nbsp;{heroes['move_speed']}</td>
-                                        </tr>
-                                        <tr className='rowBG1'>
-                                            <td style={{color:'white'}}>Base Armor</td>
-                                            <td style={{color:'white'}}>&nbsp;{(heroes['base_armor'])}</td>
-                                        </tr>
-                                        <tr className='rowBG2'>
-                                            <td style={{color:'white'}}>Base Attack rate</td>
-                                            <td style={{color:'white'}}>&nbsp;{heroes['attack_rate']}</td>
-                                        </tr>
-                                        <tr className='rowBG1'>
-                                            <td style={{color:'white'}}>Base Damage</td>
-                                            <td style={{color:'white'}}>&nbsp;{(heroes['base_attack_min'])} - {(heroes['base_attack_max'])}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </article>
-                            <div>
-                                <h2 style={{color:'white'}}>META TRENDS BY RANKS</h2>
-                                {
-                                    (data && config)&&
-                                    <Bar className='tableColor1 rowBG1' options={config} data={data} />
-                                }
-                            </div>
+                            <h2 style={{color:'white'}}>META TRENDS BY RANKS</h2>
+                            {
+                                (data && config)&&
+                                <Bar className='tableColor1 rowBG1' options={config} data={data} />
+                            }
                         </div>
                     </div>
                 </div>
