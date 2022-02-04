@@ -8,7 +8,13 @@ This is a sample application pulling from the OpenDota API and displaying inform
 ## <ins>How to get started:</ins>
 <ol> 
   <li>Download the files. </li>
-  <li>use npm install in the work space. </li>
-  <li>cd into the client file. </li>
+  <li>use npm install dependencies in the workspace. </li>
+  <pre>
+  npm install
+  </pre>
+  <li>cd into the client file and install dependencies. </li>
+  <pre>
+  npm install
+  </pre>
   <li>use npm install in the client file. </li>
 </ol>
