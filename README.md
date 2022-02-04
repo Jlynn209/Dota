@@ -16,5 +16,4 @@ This is a sample application pulling from the OpenDota API and displaying inform
   <pre>
   npm install
   </pre>
-  <li>use npm install in the client file. </li>
 </ol>
