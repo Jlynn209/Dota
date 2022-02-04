@@ -81,3 +81,8 @@
 .rowBG2{
   background-color: rgb(45,55,65);
 }
+
+.tableSize {
+  width: 30%;
+  height: 26.5px;
+}

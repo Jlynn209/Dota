@@ -80,7 +80,7 @@ const DisplayHeroStats = () => {
                             ))}
                         </div>
                     </div>            
-                    <div className='d-flex align-items-center justify-content-around bd-highlight mb-2 grey-color tableColor1'>
+                    <div className='d-flex align-items-center justify-content-around bd-highlight mb-2 grey-color tableColor1 flex-wrap'>
                         <img className='img-size' src={`https://api.opendota.com${heroes.img}`} alt='' />
                         <p className='grey-color' style={{color:'white'}}> Picks : {heroes['1_pick'] + heroes['2_pick'] + heroes['3_pick'] + heroes['4_pick'] + heroes['5_pick'] + heroes['6_pick'] + heroes['7_pick'] + heroes['8_pick']}</p>
                         <p className='grey-color' style={{color:'white'}}> Wins : {heroes['1_win'] + heroes['2_win'] + heroes['3_win'] + heroes['4_win'] + heroes['5_win'] + heroes['6_win'] + heroes['7_win'] + heroes['8_win']}</p>
@@ -104,7 +104,7 @@ const DisplayHeroStats = () => {
                             </div>
                         }
                         <article>
-                            <table className='tableColor1 grey-color' style={{width:"400px"}}>
+                            <table className='tableColor1 grey-color tableSize'>
                                 <tbody>
                                     <tr className='d-flex justify-content-around grey-color'>
                                         <td><img style={{height:'50px'}} src={dota_agi} alt=''/></td>
@@ -118,7 +118,7 @@ const DisplayHeroStats = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <table style={{width:"400px"}} className='tableColor1'>
+                            <table className='tableColor1 tableSize'>
                                 <tbody>
                                     <tr className='rowBG2'>
                                         <td style={{color:'white'}}>Movement Speed</td>
