@@ -18,6 +18,8 @@ const DisplayHeroStats = () => {
     const [data, setData] = useState(null);
     const [config, setConfig] = useState(null);
 
+    const history = useHistory();
+
     useEffect(() => {
         axios.get('https://api.opendota.com/api/heroStats')
           .then(res => {
@@ -65,6 +67,10 @@ const DisplayHeroStats = () => {
           })
           .catch(err => console.log("error: ", err))
       },[id])
+    
+    function heroHandler(){
+        history.push("/")
+    }
 
     return (
         <div className='container'>
@@ -72,7 +78,10 @@ const DisplayHeroStats = () => {
                 heroes&&
                 <div>
                     <div className='display-all-bg-color'>
-                        <h2 style={{color:'white'}} className='card-title'>Hero</h2>
+                        <div className='d-flex align-items-center '> 
+                            <h2 style={{color:'white'}} className='card-title'>Hero</h2>
+                            <h5 onClick={() => heroHandler()} className="d-flex align-items-center changeColor" style={{cursor:'pointer', marginLeft:"20px", marginTop:"10px"}}>View all heroes</h5>
+                        </div>
                         <h6 style={{color:'white'}} className='card-subtitle mb-2'>{heroes.localized_name}</h6>
                         <div className='d-flex'>
                             {heroes.roles.map((role, i) => (

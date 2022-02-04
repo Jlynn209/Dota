@@ -86,3 +86,11 @@
   width: 30%;
   height: 26.5px;
 }
+
+.changeColor{
+  color: grey;
+}
+
+.changeColor:hover{
+  color: white;
+}
